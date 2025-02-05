@@ -6,8 +6,8 @@ import { Storage } from '@ionic/storage-angular';  // Importamos Storage
   providedIn: 'root'
 })
 export class AuthService {
-  urlServer = 'http://51.79.26.171';  // URL del servidor
-  //urlServer = 'http://localhost:3000';
+  urlServer = 'http://51.79.26.171';  
+  //urlServer = 'http://localhost:8100';
   httpHeaders = { headers: new HttpHeaders({"Content-Type": "application/json"}) };
 
   constructor(
@@ -31,7 +31,7 @@ export class AuthService {
           if (data.status == 'OK') {
             // Guardamos el usuario en el localStorage
             this.storage.set('user', data.user).then(() => {
-              accept(data);  // Se acepta la respuesta con el usuario guardado
+              accept(data);  
             });
           } else {
             reject(data.errors);
@@ -42,9 +42,9 @@ export class AuthService {
           if (error.status == 422) {
             reject('Usuario o contraseña incorrectos');
           } else if (error.status == 500) {
-            reject('Error, por favor intenta más tarde');
+            reject(' por favor intenta más tarde');
           } else {
-            reject('Error al intentar iniciar sesión');
+            reject('Error al  iniciar sesión');
           }
         }
       );
@@ -77,9 +77,9 @@ export class AuthService {
           if (error.status == 422) {
             reject(error.error.errors);
           } else if (error.status == 500) {
-            reject('Error, por favor intenta más tarde');
+            reject('Error, intenta más tarde');
           } else {
-            reject('Error al intentar registrarse');
+            reject('Error al  registrarse');
           }
         }
       );
