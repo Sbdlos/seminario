@@ -68,7 +68,7 @@ followUser(user_id: any, followee_id: any){
       (error) => {
         console.log(error, 'error');
          if (error.status == 500){
-          reject('Error Porfavor intenta mas tarde');
+          reject(' Porfavor intenta mas tarde');
         }else{
           reject('Error al seguir al usuario');
         }
@@ -88,7 +88,7 @@ unfollowUser(user_id: any, followee_id: any) {
       (error) => {
         console.log(error, 'error');
         if (error.status == 500) {
-          reject('Error, por favor intenta más tarde');
+          reject(, por favor intenta más tarde');
         } else {
           reject('Error al dejar de seguir al usuario');
         }
