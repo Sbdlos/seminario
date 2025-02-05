@@ -1,10 +1,15 @@
+
 ion-header {
-  background: linear-gradient(to right, #1a1a1a, #3d3d3d);
+  background: linear-gradient(to right, #121212, #2c2c2c);
+  border-bottom: 2px solid rgba(72, 202, 228, 0.3);
 }
 
+
 ion-content {
-  --background: linear-gradient(to right, #1a1a1a, #3d3d3d) !important;
+  --background: linear-gradient(to right, rgba(26, 26, 26, 0.9), rgba(61, 61, 61, 0.9)) !important;
+  backdrop-filter: blur(10px);
 }
+
 
 ion-toolbar {
   --background: transparent;
@@ -12,53 +17,81 @@ ion-toolbar {
   font-family: "Orbitron", sans-serif;
 }
 
+
 ion-title {
-  background: linear-gradient(to right, #ffffff, #bdbdbd);
+  background: linear-gradient(to right, #48cae4, #b3e0f2);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: 1.8em;
   text-transform: uppercase;
   font-family: "Orbitron", sans-serif;
+  letter-spacing: 1.2px;
 }
 
+
 ion-searchbar {
-  --background: rgba(255, 255, 255, 0.2);
+  --background: rgba(255, 255, 255, 0.1);
   --color: #ffffff;
-  --placeholder-color: #cccccc;
-  --border-radius: 10px;
+  --placeholder-color: #b0bec5;
+  --border-radius: 12px;
+  border: 1px solid rgba(72, 202, 228, 0.3);
+  box-shadow: 0 4px 10px rgba(72, 202, 228, 0.2);
 }
+
 
 ion-list {
   background: transparent;
 }
 
+
 ion-item {
   --background: rgba(255, 255, 255, 0.1);
   --color: #ffffff;
-  border-radius: 10px;
-  margin: 5px;
+  border-radius: 12px;
+  margin: 6px;
+  padding: 12px;
+  transition: all 0.3s ease-in-out;
 }
+
+
+ion-item:hover {
+  background: rgba(72, 202, 228, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(72, 202, 228, 0.3);
+}
+
 
 ion-avatar img {
   border-radius: 50%;
   object-fit: cover;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
+  border: 2px solid rgba(72, 202, 228, 0.5);
+  box-shadow: 0 2px 6px rgba(72, 202, 228, 0.3);
 }
 
+
 ion-button {
-  --background: #ffffff;
+  --background: linear-gradient(to right, #ffffff, #b0bec5);
   --color: #000000;
-  --border-radius: 8px;
+  --border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
 }
+
+
+ion-button:hover {
+  background: linear-gradient(to right, #b3e0f2, #48cae4);
+  color: #000000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(72, 202, 228, 0.3);
+}
+
 
 ion-footer {
   background: transparent;
-  padding: 10px;
+  padding: 12px;
+  border-top: 2px solid rgba(72, 202, 228, 0.3);
 }
-
-  
-  
-  
