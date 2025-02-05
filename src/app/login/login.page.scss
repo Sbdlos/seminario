@@ -1,0 +1,51 @@
+ion-content {
+  --background: linear-gradient(to right, #1a1a1a, #4d4d4d); /* Negro a gris oscuro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Centra horizontalmente */
+  justify-content: flex-start; /* Alinea el contenido hacia la parte superior */
+  padding: 20px;
+  padding-top: 50px; /* Espacio superior para no pegar el contenido al borde */
+  height: 100%; /* Asegura que ocupe todo el espacio disponible */
+}
+
+.content {
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se apilen */
+  align-items: center;  /* Centra el contenido horizontalmente */
+  justify-content: flex-start; /* Coloca el contenido en la parte superior */
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+form {
+  width: 100%;
+  max-width: 350px;
+  border: 2px solid #ffffff; /* Borde blanco para resaltar */
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(30, 30, 30, 0.9); /* Fondo negro semi-transparente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-button {
+  width: 100%;
+  height: 50px;
+  --background: #797878; /* Botón blanco */
+  --color: #1a1a1a; /* Texto negro */
+  border: 2px solid #ffffff; /* Borde blanco */
+  border-radius: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:disabled {
+    --background: #666666; /* Botón deshabilitado en gris medio */
+    border: 2px solid #ffffff;
+  }
+}

@@ -1,0 +1,40 @@
+<ion-split-pane>
+  <ion-menu contentId="content" side="end">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title id="menu-title">Menú</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeMenu()">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+     
+        <ion-item id="profile-item" routerLink="/menu/account" routerDirection="root" (click)="closeMenu()">
+          <img src="assets/icon/icono2.png" alt="i2" class="custom-icon" />
+
+          <ion-label>Perfil</ion-label>
+        </ion-item>
+        <ion-item id="search-item" routerLink="/menu/search-users" routerDirection="root" (click)="closeMenu()">
+          <img src="assets/icon/icono3.png" alt="i3" class="custom-icon" />
+          <ion-label>Buscar Usuarios</ion-label>
+        </ion-item>
+        <ion-item id="home-item" routerLink="/menu/home" routerDirection="root" (click)="closeMenu()">
+          <img src="assets/icon/icono1.png" alt="i1" class="custom-icon" />
+          <ion-label>Inicio</ion-label>
+        </ion-item>
+        <ion-item id="logout-item" (click)="log_out()">
+          <img src="assets/icon/icono4.png" alt="i4" class="custom-icon" />
+          <ion-label>Salir</ion-label>
+        </ion-item>
+      </ion-list>
+
+      
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="content"></ion-router-outlet>
+</ion-split-pane>

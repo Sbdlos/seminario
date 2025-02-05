@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>LOGIN</ion-title>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content>
+  <div class="content">
+  <ion-title class="ion-text-capitalize"></ion-title>
+ 
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+   
+    <ion-item>
+      <ion-input
+        type="email"
+        label="correo"
+        labelPlacement="floating"
+        placeholder="ejemplo@gmail.com"
+        formControlName="email"
+      ></ion-input>
+    </ion-item>
+    <div>
+      <ng-container *ngFor="let error of formErrors.email">
+        <ion-label
+          color="danger"
+          *ngIf="
+            loginForm.get('email')?.hasError(error.type) &&
+            loginForm.get('email')?.dirty
+          "
+        >
+          {{ error.message }}
+        </ion-label>
+      </ng-container>
+    </div>
+  
+    
+    <ion-item>
+      <ion-input
+        type="password"
+        label="contraseña"
+        labelPlacement="floating"
+        placeholder="Contraseña"
+        formControlName="password"
+      ></ion-input>
+    </ion-item>
+    <div>
+      <ng-container *ngFor="let error of formErrors.password">
+        <ion-label
+          color="danger"
+          *ngIf="
+            loginForm.get('password')?.hasError(error.type) &&
+            loginForm.get('password')?.dirty
+          "
+        >
+          {{ error.message }}
+        </ion-label>
+      </ng-container>
+    </div>
+    
+    
+    <ion-button type="submit" >Login</ion-button>
+  </form>
+  
+</div> 
+  <ion-button  fill="clear" routerLink="/register" style="color: rgb(255, 255, 255);">registro</ion-button>
+  <p>{{errorMessage}}</p>
+</ion-content>
