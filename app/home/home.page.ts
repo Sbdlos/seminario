@@ -19,7 +19,7 @@ export class HomePage {
   constructor(
     private postService: PostService,
     private modalController: ModalController,
-    private actionSheetCtrl: ActionSheetController // Inyecta ActionSheetController
+    private actionSheetCtrl: ActionSheetController 
   ) {}
 
   ngOnInit() {
@@ -60,7 +60,7 @@ export class HomePage {
     );
   }
 
-  // Función para mostrar las opciones de foto
+ 
   async presentPhotoOptions() {
     const actionSheet = await this.actionSheetCtrl.create({
       header: 'Selecciona una opción',
@@ -69,14 +69,14 @@ export class HomePage {
           text: 'Tomar una foto',
           icon: 'camera',
           handler: () => {
-            this.takePhoto(CameraSource.Camera); // Llama a takePhoto con la cámara
+            this.takePhoto(CameraSource.Camera); 
           },
         },
         {
           text: 'Subir una foto de la galería',
           icon: 'image',
           handler: () => {
-            this.takePhoto(CameraSource.Photos); // Llama a takePhoto con la galería
+            this.takePhoto(CameraSource.Photos); 
           },
         },
         {
@@ -90,19 +90,18 @@ export class HomePage {
     await actionSheet.present();
   }
 
-  // Función para tomar una foto o seleccionar de la galería
+
   async takePhoto(source: CameraSource) {
     console.log('Tomando foto desde:', source);
     try {
       const capturedPhoto = await Camera.getPhoto({
-        resultType: CameraResultType.DataUrl, // Obtiene la foto como una URL de datos
-        source: source, // Usa la fuente proporcionada (cámara o galería)
-        quality: 100, // Calidad de la imagen
+        resultType: CameraResultType.DataUrl,
+        source: source, 
+        quality: 100,
       });
       console.log(capturedPhoto.dataUrl);
 
-      // Aquí puedes manejar la foto capturada o seleccionada
-      // Por ejemplo, puedes guardarla en una variable o enviarla a un servidor
+    
       alert('Foto capturada/seleccionada con éxito: ' + capturedPhoto.dataUrl);
     } catch (error) {
       console.log('Error al tomar/seleccionar la foto:', error);
