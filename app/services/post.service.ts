@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class PostService {
   urlServer = 'http://51.79.26.171';
-  //urlServer = 'http://localhost:3000';
+  //urlServer = 'http://localhost:8100';
   httpHeaders = { headers: new HttpHeaders({"Content-Type": "application/json"})};
 
   postCreated: EventEmitter<any> = new EventEmitter();
@@ -23,7 +23,7 @@ export class PostService {
         (error) => {
           console.log(error, 'error');
           if (error.status == 500) {
-            reject("Error Por favor intente mas tarde");
+            reject("Por favor intente mas tarde");
           }else{
             reject("Error al obtener los posts");
           }
@@ -41,7 +41,7 @@ export class PostService {
         (error) => {
           console.log(error, 'error');
           if (error.status == 500) {
-            reject("Error. Por favor, intente más tarde.");
+            reject(". Por favor, intente más tarde.");
           } else {
             reject("Error al crear el post.");
           }
