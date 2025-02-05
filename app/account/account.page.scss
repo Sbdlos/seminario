@@ -1,82 +1,86 @@
-/* Fondo con degradado negro-gris metálico */
+
 ion-content {
-  --background: linear-gradient(to right, #0e0e0e, #3a3a3a);
+  --background: linear-gradient(to right, #0a0a0f, #1a1a2e);
 }
 
-/* Estilos para el ion-toolbar */
+
 ion-toolbar {
-  --background: linear-gradient(to right, #1a1a1a, #4a4a4a);
-  --color: #d1d1d1; /* Texto gris claro */
+  --background: linear-gradient(to right, #161625, #2a2a40);
+  --color: #e0e0e0; /* Texto más claro para contraste */
 }
 
-/* Estilos para el ion-title con efecto metálico */
+
 ion-title {
-  background: linear-gradient(to right, #ffffff, #aaaaaa);
+  background: linear-gradient(to right, #ffffff, #48cae4);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.6em;
+  text-transform: uppercase;
 }
 
-/* Estilos para las tarjetas (ion-card) */
+
 ion-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   margin: 16px;
-  padding: 16px;
-  color: #d1d1d1;
+  padding: 18px;
+  color: #e0e0e0;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Estilos para el avatar de perfil */
+
 .profile-avatar {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   margin: 0 auto;
-  border: 2px solid #d1d1d1;
+  border: 3px solid #48cae4;
 }
 
 .profile-avatar img {
   border-radius: 50%;
 }
 
-/* Estilos para los botones */
+
 ion-button {
-  --background: #ffffff;
-  --color: #000000;
-  --border-radius: 8px;
+  --background: #48cae4;
+  --color: #0a0a0f;
+  --border-radius: 10px;
+  --box-shadow: 0 4px 8px rgba(72, 202, 228, 0.4);
   margin: 16px;
+  font-weight: bold;
 }
 
-/* Estilos para el botón "Cancelar" */
+
 ion-button[color="light"] {
   --background: transparent;
-  --color: #d1d1d1;
-  --border-color: #d1d1d1;
-  --border-width: 1px;
-  --border-style: solid;
+  --color: #48cae4;
+  --border: 2px solid #48cae4;
 }
 
-/* Estilos para los inputs */
+
 ion-input {
-  --background: rgba(255, 255, 255, 0.1);
+  --background: rgba(255, 255, 255, 0.08);
   --color: #ffffff;
-  --placeholder-color: #cccccc;
+  --placeholder-color: #a3a3a3;
   --padding-start: 16px;
   --padding-end: 16px;
   border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 16px;
 }
 
-/* Estilos para los ion-items */
+
 ion-item {
-  --background: #1a1a1a;
-  --color: #d1d1d1;
-  margin-bottom: 10px;
+  --background: rgba(255, 255, 255, 0.05);
+  --color: #e0e0e0;
+  margin-bottom: 12px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-  border: 2px solid #d1d1d1;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
-  height: 2.5rem;
+  height: 2.8rem;
 }
