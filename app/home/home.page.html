@@ -13,7 +13,7 @@
       <ion-card-header>
         <ion-card-subtitle>
           <ion-avatar class="user-avatar">
-            <img [src]="post.user.image ? post.user.image : 'assets/image/noima.png'" />
+            <img [src]="post.user.image ? post.user.image : 'assets/image/logo.png'" />
           </ion-avatar>
           {{post.user.name}} 
         </ion-card-subtitle>
@@ -25,7 +25,7 @@
   </ion-list>
 
   <ion-infinite-scroll threshold="100px" (ionInfinite)="loadPosts($event)" *ngIf="hasMore">
-    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando más..."></ion-infinite-scroll-content>
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando."></ion-infinite-scroll-content>
   </ion-infinite-scroll>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
