@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissModal()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crear nueva publicación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="addPostForm" (ngSubmit)="addPost(addPostForm.value)">
+    
+    <!-- Imagen del Post -->
+    <div class="image-upload" (click)="uploadPhone()">
+      <img [src]="post_image ? post_image : '/assets/image/noimage.png'" />
+      <p *ngIf="!post_image">adjuntar  imagen</p>
+    </div>
+
+    <!-- Campo de descripción -->
+    <ion-item>
+      <ion-textarea
+        label="..."
+        labelPlacement="floating"
+        placeholder="Que estás pensando"
+        formControlName="description">
+      </ion-textarea>
+      <ion-note slot="error" *ngIf="addPostForm.get('description')?.hasError('required')">
+        La descripción es obligatoria.
+      </ion-note>
+      <ion-note slot="error" *ngIf="addPostForm.get('description')?.hasError('minlength')">
+        minimo 5 caracteres.
+      </ion-note>
+    </ion-item>
+
+    <!-- Botón de Publicar -->
+    <ion-footer>
+      <ion-button
+        type="submit"
+        [disabled]="!addPostForm.valid"
+        expand="full">
+        Publicar
+      </ion-button>
+    </ion-footer>
+
+  </form>
+
+  <!-- Loader de Carga -->
+  <ion-loading [isOpen]="isLoading" message="Publicando " spinner="crescent"></ion-loading>
+
+</ion-content>

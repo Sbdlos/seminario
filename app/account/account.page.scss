@@ -1,0 +1,82 @@
+/* Fondo con degradado negro-gris metálico */
+ion-content {
+  --background: linear-gradient(to right, #0e0e0e, #3a3a3a);
+}
+
+/* Estilos para el ion-toolbar */
+ion-toolbar {
+  --background: linear-gradient(to right, #1a1a1a, #4a4a4a);
+  --color: #d1d1d1; /* Texto gris claro */
+}
+
+/* Estilos para el ion-title con efecto metálico */
+ion-title {
+  background: linear-gradient(to right, #ffffff, #aaaaaa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/* Estilos para las tarjetas (ion-card) */
+ion-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  margin: 16px;
+  padding: 16px;
+  color: #d1d1d1;
+}
+
+/* Estilos para el avatar de perfil */
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 2px solid #d1d1d1;
+}
+
+.profile-avatar img {
+  border-radius: 50%;
+}
+
+/* Estilos para los botones */
+ion-button {
+  --background: #ffffff;
+  --color: #000000;
+  --border-radius: 8px;
+  margin: 16px;
+}
+
+/* Estilos para el botón "Cancelar" */
+ion-button[color="light"] {
+  --background: transparent;
+  --color: #d1d1d1;
+  --border-color: #d1d1d1;
+  --border-width: 1px;
+  --border-style: solid;
+}
+
+/* Estilos para los inputs */
+ion-input {
+  --background: rgba(255, 255, 255, 0.1);
+  --color: #ffffff;
+  --placeholder-color: #cccccc;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+/* Estilos para los ion-items */
+ion-item {
+  --background: #1a1a1a;
+  --color: #d1d1d1;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  border: 2px solid #d1d1d1;
+  width: 100%;
+  height: 2.5rem;
+}

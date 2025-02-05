@@ -1,0 +1,72 @@
+ion-menu {
+  --background: linear-gradient(to bottom, #1a1a1a, #3d3d3d);   border-right: 2px solid rgba(255, 255, 255, 0.2); }
+
+ion-menu ion-content {
+  --background: transparent;
+}
+
+ion-menu ion-toolbar {
+  --background: transparent;
+  --color: #e0e0e0;   font-family: "Orbitron", sans-serif;
+}
+
+#menu-title {
+  display: inline-block;
+  white-space: nowrap;
+  background: linear-gradient(to right, #ffffff, #bdbdbd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+}
+
+ion-menu ion-list {
+  background: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+ion-menu ion-item {
+  --background: transparent;
+  --color: #e0e0e0;
+  --padding-start: 25px;
+  --padding-end: 25px;
+  --min-height: 55px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+ion-menu ion-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+ion-menu .custom-icon {
+  width: 26px;
+  height: 26px;
+  margin-right: 12px;
+}
+
+ion-menu .bottom-image {
+  text-align: center;
+  padding: 25px;
+  background: transparent;
+}
+
+ion-menu .bottom-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+ion-menu .bottom-image img:hover {
+  transform: scale(1.08);
+}
+

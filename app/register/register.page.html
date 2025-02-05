@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+
+
+  
+  <form [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value)">
+    <!-- Campo Nombre -->
+    <ion-item>
+      <ion-input
+        label="Nombre"
+        labelPlacement="floating"
+        placeholder="Ingrese su nombre"
+        formControlName="name"
+      ></ion-input>
+    </ion-item>
+    <ion-label class="error-message" *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.dirty">
+      {{ formErrors.name }}
+    </ion-label>
+
+    <!-- Campo Apellido -->
+    <ion-item>
+      <ion-input
+        label="Apellido"
+        labelPlacement="floating"
+        placeholder="Ingrese su apellido"
+        formControlName="last_name"
+      ></ion-input>
+    </ion-item>
+    <ion-label class="error-message" *ngIf="registerForm.get('last_name')?.invalid && registerForm.get('last_name')?.dirty">
+      {{ formErrors.last_name }}
+    </ion-label>
+
+    <!-- Campo Correo -->
+    <ion-item>
+      <ion-input
+        label="Correo"
+        labelPlacement="floating"
+        placeholder="Example@gmail.com"
+        formControlName="email"
+      ></ion-input>
+    </ion-item>
+    <ion-label class="error-message" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.dirty">
+      {{ formErrors.email }}
+    </ion-label>
+
+    <!-- Campo Usuario -->
+    <ion-item>
+      <ion-input
+        label="Usuario"
+        labelPlacement="floating"
+        placeholder="Ingrese su usuario"
+        formControlName="username"
+      ></ion-input>
+    </ion-item>
+    <ion-label class="error-message" *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.dirty">
+      {{ formErrors.username }}
+    </ion-label>
+
+    <!-- Campo Contraseña -->
+    <ion-item>
+      <ion-input
+        type="password"
+        label="Contraseña"
+        labelPlacement="floating"
+        placeholder="Ingrese su contraseña"
+        formControlName="password"
+      ></ion-input>
+    </ion-item>
+    <ion-label class="error-message" *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.dirty">
+      {{ formErrors.password }}
+    </ion-label>
+
+    <!-- Campo Confirmación de Contraseña -->
+    <ion-item>
+      <ion-input
+        type="password"
+        label="Confirmar Contraseña"
+        labelPlacement="floating"
+        placeholder="Confirme su contraseña"
+        formControlName="passwordConfirmation"
+      ></ion-input>
+    </ion-item>
+    <ion-label class="error-message" *ngIf="registerForm.get('passwordConfirmation')?.invalid && registerForm.get('passwordConfirmation')?.dirty">
+      {{ formErrors.passwordConfirmation }}
+    </ion-label>
+
+    <!-- Botón de Registro -->
+    <ion-button expand="block" type="submit" [disabled]="!registerForm.valid">
+      Registrarse
+    </ion-button>
+
+    <!-- Botón "Volver al Login" -->
+    <ion-button expand="block" (click)="goToLogin()">atrás</ion-button>
+  </form>
+</ion-content>
