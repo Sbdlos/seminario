@@ -1,27 +1,38 @@
+
 ion-menu {
-  --background: linear-gradient(to bottom, #1a1a1a, #3d3d3d);   border-right: 2px solid rgba(255, 255, 255, 0.2); }
+  --background: linear-gradient(to bottom, rgba(13, 13, 19, 0.85), rgba(26, 26, 46, 0.9)); 
+  border-right: 2px solid rgba(72, 202, 228, 0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: 4px 0 15px rgba(72, 202, 228, 0.2);
+}
+
 
 ion-menu ion-content {
   --background: transparent;
 }
 
+
 ion-menu ion-toolbar {
   --background: transparent;
-  --color: #e0e0e0;   font-family: "Orbitron", sans-serif;
+  --color: #e0e0e0;
+  font-family: "Orbitron", sans-serif;
 }
+
 
 #menu-title {
   display: inline-block;
   white-space: nowrap;
-  background: linear-gradient(to right, #ffffff, #bdbdbd);
+  background: linear-gradient(to right, #48cae4, #b3e0f2);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: 1.8em;
   text-transform: uppercase;
   font-family: "Orbitron", sans-serif;
+  letter-spacing: 1.5px;
 }
+
 
 ion-menu ion-list {
   background: transparent;
@@ -29,44 +40,54 @@ ion-menu ion-list {
   padding-bottom: 0;
 }
 
+
 ion-menu ion-item {
-  --background: transparent;
+  --background: rgba(255, 255, 255, 0.05);
   --color: #e0e0e0;
-  --padding-start: 25px;
-  --padding-end: 25px;
-  --min-height: 55px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  --padding-start: 30px;
+  --padding-end: 30px;
+  --min-height: 60px;
+  border-bottom: 1px solid rgba(72, 202, 228, 0.2);
   font-family: "Orbitron", sans-serif;
+  font-size: 1.1em;
   letter-spacing: 1px;
   transition: all 0.3s ease-in-out;
+  border-radius: 10px;
 }
+
 
 ion-menu ion-item:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(72, 202, 228, 0.2);
   transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(72, 202, 228, 0.3);
 }
 
+
 ion-menu .custom-icon {
-  width: 26px;
-  height: 26px;
-  margin-right: 12px;
+  width: 28px;
+  height: 28px;
+  margin-right: 14px;
+  filter: drop-shadow(0 0 5px rgba(72, 202, 228, 0.6));
 }
+
 
 ion-menu .bottom-image {
   text-align: center;
-  padding: 25px;
+  padding: 30px;
   background: transparent;
 }
 
+
 ion-menu .bottom-image img {
-  max-width: 90%;
+  max-width: 85%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.15);
-  transition: transform 0.3s ease-in-out;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(72, 202, 228, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 
 ion-menu .bottom-image img:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(72, 202, 228, 0.5);
 }
-
